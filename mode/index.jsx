@@ -7,6 +7,7 @@ function ChartExample() {
     <div style={{ width: "100%", height: "100%" }}>
       <OrgChartReact
         nodeBinding={{ field_0: "name", field_1: "title" }}
+        style={{ width: "100%", height: "100%" }}
         mode="dark"
         template="olivia"
       >
