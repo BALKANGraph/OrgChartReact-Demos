@@ -1,0 +1,34 @@
+{
+  "name": "getting-started-with-balkan-orgchart-react",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite"
+  },
+  "dependencies": {
+    "balkan-orgchart-react": "latest",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  },
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "npm install"
+    }
+  ],
+  "tasks": {
+    "dev-server": {
+      "name": "Run Dev Server",
+      "command": "npm run start",
+      "runAtStart": true,
+      "preview": {
+        "port": 5173
+      }
+    }
+  }
+}
