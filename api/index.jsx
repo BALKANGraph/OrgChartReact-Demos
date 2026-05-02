@@ -6,8 +6,8 @@ export const ChartExample = () => {
   const chartRef = useRef<OrgChartJS>(null);
 
   const handleExport = () => {    
+    alert(123);
     if (chartRef.current) {
-      alert(123);
       chartRef.current.exportToPDF(); 
     }
   };
