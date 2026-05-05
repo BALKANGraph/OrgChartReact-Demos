@@ -20,7 +20,7 @@ function ChartExample() {
   return  <OrgChartReact data={jsonData}  nodeBinding={{ field_0: 'name', field_1: 'title' }}></OrgChartReact>
 }
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ChartExample />
   </React.StrictMode>

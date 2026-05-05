@@ -6,7 +6,6 @@ export const ChartExample = () => {
   const chartRef = useRef<OrgChartJS>(null);
 
   const handleExport = () => {    
-    alert(123);
     if (chartRef.current) {
       chartRef.current.exportToPDF(); 
     }
@@ -27,7 +26,7 @@ export const ChartExample = () => {
   );
 };
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ChartExample />
   </React.StrictMode>

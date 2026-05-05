@@ -30,7 +30,7 @@ function ChartExample() {
   );
 }
 
-createRoot(document.getElementById("root")).render(
+createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ChartExample />
   </React.StrictMode>
