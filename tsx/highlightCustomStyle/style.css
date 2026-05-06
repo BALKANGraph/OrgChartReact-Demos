@@ -1,0 +1,10 @@
+g.boc-hover .boc-hoverable{
+    stroke: #F57C00 ;
+}
+
+
+[data-n-id].boc-hover .boc-hoverable {
+    stroke: initial ;
+    stroke-width: initial ;
+    fill: #F57C00;
+}

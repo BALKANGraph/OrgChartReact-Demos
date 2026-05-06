@@ -1,10 +1,10 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { OrgChartReact } from "balkan-orgchart-react";
+import "./style.css";
 
 export const ChartExample = () => {
   return  <OrgChartReact 
-            template="olivia"
             data={[
               { id: 1, name: "John Carter", title: "CEO", img: "https://cdn.balkan.app/shared/a/2.jpg" },
               { id: 2, pid: 1, name: "Emma Stone", title: "CTO", img: "https://cdn.balkan.app/shared/a/3.jpg" },
@@ -18,7 +18,7 @@ export const ChartExample = () => {
               { id: 11, pid: 2, name: "Isabella Moore", title: "UI/UX Designer", img: "https://cdn.balkan.app/shared/a/11.jpg" }
             ]}  
             nodeBinding={{ field_0: 'name', field_1: 'title', img_0: 'img' }}
-            highlightOnHover="sameLevel">
+            highlightOnHover="parents">
           </OrgChartReact>
 }
 
