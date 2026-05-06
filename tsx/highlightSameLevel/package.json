@@ -1,5 +1,5 @@
 {
-  "name": "highlight-parents",
+  "name": "highlight-same-level",
   "private": true,
   "version": "1.0.0",
   "type": "module",

@@ -18,7 +18,7 @@ export const ChartExample = () => {
               { id: 11, pid: 2, name: "Isabella Moore", title: "UI/UX Designer", img: "https://cdn.balkan.app/shared/a/11.jpg" }
             ]}  
             nodeBinding={{ field_0: 'name', field_1: 'title', img_0: 'img' }}
-            highlightOnHover="parents">
+            highlightOnHover="sameLevel">
           </OrgChartReact>
 }
 
