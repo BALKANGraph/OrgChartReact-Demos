@@ -1,0 +1,23 @@
+[data-n-id] rect {
+    fill: #016e25;
+}
+
+[data-n-id='1'] rect {
+    fill: #750000;
+}
+
+.node.red rect {
+    fill: #750000;
+}
+
+[data-l-id] path {
+    stroke: #750000;
+}
+
+[data-l-id='[3][4]'] path {
+    stroke: #016e25;
+}
+
+[data-ctrl-ec-id] circle {
+    fill: #750000 !important;
+}
