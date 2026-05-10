@@ -21,3 +21,11 @@
 [data-ctrl-ec-id] circle {
     fill: #750000 !important;
 }
+
+[data-ctrl-ec-id='3'] circle {
+    fill: #016e25 !important;
+}
+
+[data-ctrl-n-menu-id] circle {
+    fill: #bfbfbf;
+}

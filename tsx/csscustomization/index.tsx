@@ -11,7 +11,13 @@ export const ChartExample = () => {
               { id: 3, pid: 1, name: "Peter Stevens", title: "HR Manager", img: "https://cdn.balkan.app/shared/3.jpg" },
               { id: 4, pid: 3, name: "Avery Woods", title: "HR", img: "https://cdn.balkan.app/shared/4.jpg", tags: ["red"] }
             ]}  
-            nodeBinding={{ field_0: 'name', field_1: 'title' }}>
+            nodeBinding={{ field_0: 'name', field_1: 'title' }}
+            nodeMenu={{
+              details: { text: "Details" },
+              edit: { text: "Edit" },
+              add: { text: "Add" },
+              remove: { text: "Remove" }}}
+            >
           </OrgChartReact>
 }
 
