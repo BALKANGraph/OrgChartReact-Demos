@@ -4,9 +4,10 @@ import { OrgChartReact, Employee, Template } from "balkan-orgchart-react";
 
 function ChartExample() {
   return (
-      <OrgChartReact template='myTemplate1'>      
+    <div style={{ width: "100%", height: "100%" }}>
+      <OrgChartReact template='myTemplate'>      
         
-      <Template name='myTemplate1' nodeWidth={200} nodeHeight={100} baseTemplateName='ana' renderNode={(node, data) => {
+      <Template name='myTemplate' nodeWidth={200} nodeHeight={100} baseTemplateName='ana' renderNode={(node, data) => {
           return <>
             <rect x="0" y="0" height={node.h} width={node.w} fill="#fff" stroke="#aeaeae" strokeWidth={1}  rx={10} ry={10}> </rect>
 
@@ -17,14 +18,14 @@ function ChartExample() {
         }}>
       </Template>
       
-      <Template name='myTemplate2' nodeWidth={500} nodeHeight={500}  baseTemplateName='myTemplate1'></Template>
 
-      <Employee employeeName='Denny Curtis' >
+      <Employee employeeName='Denny Curtis Denny Curtis Denny Curtis Denny Curtis' >
         <Employee  employeeName='Lexie Cole'></Employee>
-        <Employee  employeeName='Janae Barrett'  template='myTemplate2'></Employee>
+        <Employee  employeeName='Janae Barrett'></Employee>
         <Employee employeeName='Aaliyah Webb'></Employee>
       </Employee>
      </OrgChartReact>
+    </div>
   );
 }
 
