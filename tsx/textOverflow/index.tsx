@@ -11,7 +11,7 @@ function ChartExample() {
           return <>
             <rect x="0" y="0" height={node.h} width={node.w} fill="#fff" stroke="#aeaeae" strokeWidth={1}  rx={10} ry={10}> </rect>
 
-            <text x={node.w ? node.w  / 2 : 0} y={node.h ? node.h  / 2 + 10: 0}  fill="#aeaeae" fontSize="20" textAnchor="middle">
+            <text data-width="230" data-text-overflow="ellipsis" x={node.w ? node.w  / 2 : 0} y={node.h ? node.h  / 2 + 10: 0}  fill="#aeaeae" fontSize="20" textAnchor="middle">
                 {data.employeeName}
             </text>                        
           </>
