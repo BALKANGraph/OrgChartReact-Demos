@@ -8,7 +8,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "balkan-orgchart-react": "latest",
+    "balkan-orgchart-react": "^9.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
