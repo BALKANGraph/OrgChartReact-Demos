@@ -1,0 +1,6 @@
+#buttons{
+  position: absolute;
+  top: 5px;
+  left: 50px;
+  z-index: 5000000;
+}
