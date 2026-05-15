@@ -25,10 +25,10 @@ export const ChartExample = () => {
   return (
     <>
     <div id="buttons">
-      <button id="from6to0" onClick={add6to0}>Add slink from 6 to 0</button>
-      <button id="from5to1" onClick={add5to1}>Add slink from 5 to 1</button>
-      <button id="rfrom6to0" onClick={remove6to0}>Remove slink from 6 to 0</button>
-      <button id="rfrom5to1" onClick={remove5to1}>Remove slink from 5 to 1</button>
+      <button onClick={add6to0}>Add slink from 6 to 0</button>
+      <button onClick={add5to1}>Add slink from 5 to 1</button>
+      <button onClick={remove6to0}>Remove slink from 6 to 0</button>
+      <button onClick={remove5to1}>Remove slink from 5 to 1</button>
     </div>
 
     <OrgChartReact ref={chartRef}
