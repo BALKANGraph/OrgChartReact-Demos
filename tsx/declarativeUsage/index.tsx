@@ -4,7 +4,6 @@ import { OrgChartReact, Employee } from "balkan-orgchart-react";
 
 function ChartExample() {
   return (
-    <div style={{ width: "100%", height: "100%" }}>
       <OrgChartReact
         nodeBinding={{ field_0: "name", field_1: "title" }}
         style={{ width: "100%", height: "100%" }}
@@ -16,7 +15,6 @@ function ChartExample() {
           <Employee name="Aaliyah Webb" title="Assistant" assistant={true} />
         </Employee>
       </OrgChartReact>
-    </div>
   );
 }
 
