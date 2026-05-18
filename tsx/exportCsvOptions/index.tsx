@@ -3,23 +3,25 @@ import { createRoot } from "react-dom/client";
 import { OrgChartReact, Employee, OrgChartJS } from "balkan-orgchart-react";
 
 
-  return  <OrgChartReact 
+export const ChartExample = () => {
+  const chart = useRef<OrgChartJS>();
+  return  <OrgChartReact ref={chart}
             nodeBinding={{ field_0: 'name', field_1: 'title' }}
             menu={{
                 csv: {
                     text: 'Export CSV',
                     icon: OrgChartJS.icon.csv(24, 24, "#7A7A7A"),
-                    onClick: function (id) {
-                    chart.exportToCSV({
-                    filename: "myChart.CSV",
-                    nodeId: id,
-                });
-            }
+                    onClick: function (id: string) {
+                      chart.current?.exportToCSV({
+                          filename: "myChart.CSV",
+                          nodeId: id,
+                      });
+                  }
                 },
             }}
             enableSearch={false}
           >
-            <Employee
+            <Employee 
               name="Billy Moore"
               title="CEO"
             >
