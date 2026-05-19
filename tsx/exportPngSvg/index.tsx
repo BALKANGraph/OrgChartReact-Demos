@@ -8,26 +8,13 @@ export const ChartExample = () => {
             menu={{ png_export: { text: "Export PNG" }, svg_export: { text: "Export SVG" } }}
             nodeMenu={{ png_export: { text: "Export PNG" }, svg_export: { text: "Export SVG" } }}
             enableSearch={false}
+            data={[
+                { id: 1, name: "Billy Moore", title: "CEO" },
+                { id: 2, pid: 1, name: "Billie Rose", title: "Dev Team Lead" },
+                { id: 3, pid: 1, name: "Glenn Bell", title: "HR" },
+                { id: 4, pid: 3, name: "Blair Francis", title: "HR" }
+            ]}
           >
-            <Employee
-              name="Billy Moore"
-              title="CEO"
-            >
-              <Employee
-                name="Billie Rose"
-                title="Dev Team Lead"
-              />
-
-              <Employee
-                name="Glenn Bell"
-                title="HR"
-              >
-                <Employee
-                  name="Blair Francis"
-                  title="HR"
-                />
-              </Employee>
-            </Employee>
           </OrgChartReact>
 }
 

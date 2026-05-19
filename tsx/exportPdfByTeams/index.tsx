@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact, Employee, OrgChartJS } from "balkan-orgchart-react";
+import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
 export const ChartExample = () => {
   const chartRef = useRef<OrgChartJS>(null);
@@ -33,76 +33,23 @@ export const ChartExample = () => {
                 },
             }}
             enableSearch={false}
+            data={[
+              { id: 1, name: "Jack Hill", title: "Chairman & CEO" },
+              { id: 2, pid: 1, name: "Lexie Cole", title: "QA Lead" },
+              { id: 3, pid: 1, name: "Janae Barrett", title: "Technical Director" },
+              { id: 4, pid: 1, name: "Aaliyah Webb", title: "Manager" },
+              { id: 5, pid: 2, name: "Elliot Ross", title: "QA" },
+              { id: 6, pid: 2, name: "Anahi Gordon", title: "QA" },
+              { id: 8, pid: 3, name: "Nash Ingram", title: ".NET Team Lead" },
+              { id: 9, pid: 3, name: "Sage Barnett", title: "JS Team Lead" },
+              { id: 10, pid: 8, name: "Alice Gray", title: "Programmer" },
+              { id: 12, pid: 9, name: "Reuben Mcleod", title: "Programmer" },
+              { id: 13, pid: 9, name: "Ariel Wiley", title: "Programmer" },
+              { id: 14, pid: 4, name: "Lucas West", title: "Marketer" },
+              { id: 15, pid: 4, name: "Adan Travis", title: "Designer" },
+              { id: 16, pid: 4, name: "Alex Snider", title: "Sales Manager" }
+            ]}
           >
-            <Employee
-              name="Jack Hill"
-              title="Chairman & CEO"
-            >
-              <Employee
-                name="Lexie Cole"
-                title="QA Lead"
-              >
-                <Employee
-                  name="Elliot Ross"
-                  title="QA"
-                />
-
-                <Employee
-                  name="Anahi Gordon"
-                  title="QA"
-                />
-              </Employee>
-
-              <Employee
-                name="Janae Barrett"
-                title="Technical Director"
-              >
-                <Employee
-                  name="Nash Ingram"
-                  title=".NET Team Lead"
-                >
-                  <Employee
-                    name="Alice Gray"
-                    title="Programmer"
-                  />
-                </Employee>
-
-                <Employee
-                  name="Sage Barnett"
-                  title="JS Team Lead"
-                >
-                  <Employee
-                    name="Reuben Mcleod"
-                    title="Programmer"
-                  />
-
-                  <Employee
-                    name="Ariel Wiley"
-                    title="Programmer"
-                  />
-                </Employee>
-              </Employee>
-
-              <Employee
-                name="Aaliyah Webb"
-                title="Manager"
-              >
-                <Employee
-                  name="Lucas West"
-                  title="Marketer"
-                />
-
-                <Employee
-                  name="Adan Travis"
-                  title="Designer"
-                />
-
-                <Employee
-                  name="Alex Snider"
-                  title="Sales Manager"
-                />
-              </Employee>
-            </Employee>
           </OrgChartReact>
 }
 
