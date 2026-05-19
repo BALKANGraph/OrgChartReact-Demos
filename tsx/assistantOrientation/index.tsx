@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact, Employee, OrgChartJS } from "balkan-orgchart-react";
+import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
 function ChartExample() {
   return (
@@ -9,65 +9,76 @@ function ChartExample() {
       style={{ width: "100%", height: "100%" }}
       enableSearch={false}
       orientation={OrgChartJS.orientation.right}
+      data={[
+        {
+          "id": 1,
+          "tags": ["ceo"],
+          "name": "Denny Curtis",
+          "title": "CEO",
+          "img": "https://cdn.balkan.app/shared/2.jpg"
+        },
+        {
+          "id": 2,
+          "pid": 1,
+          "name": "Ashley Barnett",
+          "title": "Sales Manager",
+          "img": "https://cdn.balkan.app/shared/3.jpg"
+        },
+        {
+          "id": 3,
+          "pid": 2,
+          "name": "Elliot Patel",
+          "title": "Sales",
+          "img": "https://cdn.balkan.app/shared/5.jpg"
+        },
+        {
+          "id": 4,
+          "pid": 2,
+          "name": "Lynn Hussain",
+          "title": "Sales",
+          "img": "https://cdn.balkan.app/shared/6.jpg"
+        },
+        {
+          "id": 5,
+          "pid": 2,
+          "tags": ["assistant"],
+          "name": "Rudy Griffiths",
+          "title": "Assistant",
+          "img": "https://cdn.balkan.app/shared/9.jpg"
+        },
+        {
+          "id": 6,
+          "pid": 2,
+          "tags": ["assistant"],
+          "name": "Eli Palmer",
+          "title": "Assistant",
+          "img": "https://cdn.balkan.app/shared/10.jpg"
+        },
+        {
+          "id": 7,
+          "pid": 1,
+          "tags": ["RR"],
+          "name": "Caden Ellison",
+          "title": "Dev Manager",
+          "img": "https://cdn.balkan.app/shared/4.jpg"
+        },
+        {
+          "id": 8,
+          "pid": 7,
+          "name": "Tanner May",
+          "title": "Developer",
+          "img": "https://cdn.balkan.app/shared/7.jpg"
+        },
+        {
+          "id": 9,
+          "pid": 7,
+          "name": "Fran Parsons",
+          "title": "Developer",
+          "img": "https://cdn.balkan.app/shared/8.jpg"
+        }
+      ]}
     >
-    <Employee
-      name="Denny Curtis"
-      title="CEO"
-      img="https://cdn.balkan.app/shared/2.jpg"
-      tags={["ceo"]}
-    >
-      <Employee
-        name="Ashley Barnett"
-        title="Sales Manager"
-        img="https://cdn.balkan.app/shared/3.jpg"
-      >
-        <Employee
-          name="Elliot Patel"
-          title="Sales"
-          img="https://cdn.balkan.app/shared/5.jpg"
-        />
-
-        <Employee
-          name="Lynn Hussain"
-          title="Sales"
-          img="https://cdn.balkan.app/shared/6.jpg"
-        />
-
-        <Employee
-          name="Rudy Griffiths"
-          title="Assistant"
-          img="https://cdn.balkan.app/shared/9.jpg"
-          assistant={true}
-        />
-
-        <Employee
-          name="Eli Palmer"
-          title="Assistant"
-          img="https://cdn.balkan.app/shared/10.jpg"
-          assistant={true}
-        />
-      </Employee>
-
-      <Employee
-        name="Caden Ellison"
-        title="Dev Manager"
-        img="https://cdn.balkan.app/shared/4.jpg"
-        tags={["RR"]}
-      >
-        <Employee
-          name="Tanner May"
-          title="Developer"
-          img="https://cdn.balkan.app/shared/7.jpg"
-        />
-
-        <Employee
-          name="Fran Parsons"
-          title="Developer"
-          img="https://cdn.balkan.app/shared/8.jpg"
-        />
-      </Employee>
-    </Employee>
-    </OrgChartReact>
+      </OrgChartReact>
   );
 }
 

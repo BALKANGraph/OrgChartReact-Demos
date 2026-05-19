@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact, Employee } from "balkan-orgchart-react";
+import { OrgChartReact } from "balkan-orgchart-react";
 
 function ChartExample() {
   return (
@@ -9,49 +9,59 @@ function ChartExample() {
       style={{ width: "100%", height: "100%" }}
       enableSearch={false}
       tags={{ assistant: { template: "ula" } }}
+      data={[
+        {
+          "id": 1,
+          "name": "Denny Curtis",
+          "title": "CEO",
+          "img": "https://cdn.balkan.app/shared/2.jpg"
+        },
+        {
+          "id": 2,
+          "pid": 1,
+          "name": "Ashley Barnett",
+          "title": "Sales Manager",
+          "img": "https://cdn.balkan.app/shared/3.jpg"
+        },
+        {
+          "id": 3,
+          "pid": 2,
+          "name": "Elliot Patel",
+          "title": "Sales",
+          "img": "https://cdn.balkan.app/shared/5.jpg"
+        },
+        {
+          "id": 4,
+          "pid": 2,
+          "name": "Lynn Hussain",
+          "title": "Sales",
+          "img": "https://cdn.balkan.app/shared/6.jpg"
+        },
+        {
+          "id": 5,
+          "pid": 1,
+          "name": "Caden Ellison",
+          "title": "Dev Manager",
+          "img": "https://cdn.balkan.app/shared/4.jpg"
+        },
+        {
+          "id": 6,
+          "pid": 5,
+          "name": "Tanner May",
+          "title": "Developer",
+          "img": "https://cdn.balkan.app/shared/7.jpg"
+        },
+        {
+          "id": 7,
+          "pid": 1,
+          "tags": ["assistant"],
+          "name": "Rudy Griffiths",
+          "title": "Assistant",
+          "img": "https://cdn.balkan.app/shared/9.jpg"
+        }
+      ]}
     >
-    <Employee
-      name="Denny Curtis"
-      title="CEO"
-      img="https://cdn.balkan.app/shared/2.jpg"
-    >
-      <Employee
-        name="Ashley Barnett"
-        title="Sales Manager"
-        img="https://cdn.balkan.app/shared/3.jpg"
-      >
-        <Employee
-          name="Elliot Patel"
-          title="Sales"
-          img="https://cdn.balkan.app/shared/5.jpg"
-        />
 
-        <Employee
-          name="Lynn Hussain"
-          title="Sales"
-          img="https://cdn.balkan.app/shared/6.jpg"
-        />
-      </Employee>
-
-      <Employee
-        name="Caden Ellison"
-        title="Dev Manager"
-        img="https://cdn.balkan.app/shared/4.jpg"
-      >
-        <Employee
-          name="Tanner May"
-          title="Developer"
-          img="https://cdn.balkan.app/shared/7.jpg"
-        />
-      </Employee>
-
-      <Employee
-        name="Rudy Griffiths"
-        title="Assistant"
-        img="https://cdn.balkan.app/shared/9.jpg"
-        assistant={true}
-      />
-    </Employee>
 
     </OrgChartReact>
   );
