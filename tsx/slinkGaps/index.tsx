@@ -2,8 +2,6 @@ import React, { useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
-
-
 export const ChartExample = () => {
   OrgChartJS.SLINK_GAP = 10;
   return (

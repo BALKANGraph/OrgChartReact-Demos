@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact, Employee } from "balkan-orgchart-react";
+import { OrgChartReact } from "balkan-orgchart-react";
 
 function ChartExample() {
   return (
@@ -8,17 +8,16 @@ function ChartExample() {
       nodeBinding={{ field_0: "id" }}
       style={{ width: "100%", height: "100%" }}
       enableSearch={false}
+      data={[
+        { id: 1 },
+        { id: 2, pid: 1 },
+        { id: 3, pid: 1 },
+        { id: 4, pid: 1, tags: ['partner'] },
+        { id: 5, pid: 1, tags: ['partner'] },
+        { id: 6, pid: 1, tags: ['partner'] },
+        { id: 7, pid: 1, tags: ['partner'] }
+      ]}
     >
-      
-    <Employee>
-      <Employee />
-      <Employee />
-
-      <Employee partner={true} />
-      <Employee partner={true} />
-      <Employee partner={true} />
-      <Employee partner={true} />
-    </Employee>
 
     </OrgChartReact>
   );
