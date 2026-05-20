@@ -4,11 +4,9 @@ import { OrgChartReact, Template } from "balkan-orgchart-react";
 import "./style.css";
 
 export const ChartExample = () => {
-  
 
-        
-
-  return <OrgChartReact id="tree" template='myTemplate1'   
+  return <OrgChartReact id="tree"    
+            nodeBinding={{ field_0: "employeeName", field_1: "title", field_2: "img" }}
             nodeMenu={{
               details: { text: "Details" },
               edit: { text: "Edit" },
@@ -47,30 +45,7 @@ export const ChartExample = () => {
               }
             ]}
           >
-            <Template name='myTemplate1' nodeWidth={200} nodeHeight={100} baseTemplateName='ana' renderNode={(node, data) => {
-              return <>
-                <rect x="0" y="0" height={node.h} width={node.w} fill="#fff" stroke="#aeaeae" strokeWidth={1}  rx={10} ry={10}> </rect>
-
-                {data.img ? (
-                  <image
-                    x={10}
-                    y={10}
-                    width={36}
-                    height={36}
-                    href={data.img}
-                    preserveAspectRatio="xMidYMid slice"
-                  />
-                ) : null}
-
-                <text className="field_0" x={node.w ? node.w  / 2 : 0} y={node.h ? node.h  / 2 + 30: 0} fontSize="20" textAnchor="middle">
-                  {data.field_0 ?? data.employeeName}
-                </text>     
-                <text className="field_1" x={node.w ? node.w - 10 : 0} y={20} fontSize="16" textAnchor="end">
-                  {data.field_1 ?? data.title}
-                </text>                      
-              </>
-            }}>
-            </Template>
+           
     </OrgChartReact>
 }
 
