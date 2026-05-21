@@ -1,7 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact, Template } from "balkan-orgchart-react";
-import "./style.css";
+import { OrgChartReact } from "balkan-orgchart-react";
 
 export const ChartExample = () => {
 
