@@ -5,12 +5,21 @@ import { OrgChartReact, OrgChartJS} from "balkan-orgchart-react";
 export const ChartExample = () => {
 
   const chartRef = useRef<OrgChartJS>(null);
+
+  let logo =
+    `<svg>
+        <text fill="#039be5" 
+            style="font-size: 24px; font-family: Roboto-Bold;" x="50%" y="50%"
+            text-anchor="middle" dominant-baseline="middle">
+            My Company Organization Chart
+        </text>
+    </svg>`;
   
   function pdfPreview() {
     chartRef.current?.pdfPreviewUI.show({
       pages: [
         {
-          content: '<svg>[Your SVG definition here]</svg>'
+          content: logo
           // or
           // content: '[Your HTML definition here]'
         },
