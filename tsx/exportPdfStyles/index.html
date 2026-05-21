@@ -4,14 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PDF Export Styles</title>
-  <link rel="stylesheet" href="/style.css" />
   <style>
     html, body, #root {
       width: 100%;
       height: 100%;
       margin: 0;
     }
+
   </style>
+  <style id="myStyles">
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+  .node {
+    font-family: "Gochi Hand";
+  }
+
+  .node.HR rect {
+    fill: #E99113;
+  }
+    </style>
 </head>
 <body>
   <div id="root"></div>

@@ -5,20 +5,17 @@ import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 export const ChartExample = () => {
 
   const chartRef = useRef<OrgChartJS>(null);
-  const exportStylesRef = useRef("");
+  const exportStyles = document.getElementById("myStyles")?.outerHTML || "";
 
-  async function pdf() {
-    const response = await fetch("/style.css");
-    exportStylesRef.current = await response.text();
-
-    chartRef.current?.exportToPDF({
-        format: "A4",
-    });
+  function pdf() {
+      chartRef.current?.exportToPDF({
+          format: "A4"
+      });
   }
 
   useEffect(() => {
     chartRef.current?.onExportStart((args) => {
-      args.styles += `<style id="myStyles">${exportStylesRef.current}</style>`;
+      args.styles += exportStyles;
     });
   }, []);
 
