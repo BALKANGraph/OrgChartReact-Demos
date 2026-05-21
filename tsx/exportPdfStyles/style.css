@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+.node {
+  font-family: "Gochi Hand";
+}
+
+.node.HR rect {
+  fill: #E99113;
+}

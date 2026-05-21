@@ -1,23 +1,32 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
 export const ChartExample = () => {
-  const chartRef = useRef<OrgChartJS>(null);
 
-  function pdf() {
+  const chartRef = useRef<OrgChartJS>(null);
+  const exportStylesRef = useRef("");
+
+  async function pdf() {
+    const response = await fetch("/style.css");
+    exportStylesRef.current = await response.text();
+
     chartRef.current?.exportToPDF({
         format: "A4",
-        header: '<text style="font-size:36px;">My Header</text>',
-        footer: '<text style="font-size:24px;">My Footer. Page {current-page} of {total-pages}</text>',
     });
-}
+  }
+
+  useEffect(() => {
+    chartRef.current?.onExportStart((args) => {
+      args.styles += `<style id="myStyles">${exportStylesRef.current}</style>`;
+    });
+  }, []);
 
   return  <OrgChartReact ref={chartRef}
             nodeBinding={{ field_0: 'name', field_1: 'title' }}
             menu={{
                 export_pdf: {
-                    text: "Export to PDF with my header and footer",
+                    text: "Export to PDF with styles",
                     icon: OrgChartJS.icon.pdf(24, 24, "#7A7A7A"),
                     onClick: pdf
                 },
@@ -26,8 +35,8 @@ export const ChartExample = () => {
               data={[
                 { id: 1, name: "Billy Moore", title: "CEO" },
                 { id: 2, pid: 1, name: "Billie Rose", title: "Dev Team Lead" },
-                { id: 3, pid: 1, name: "Glenn Bell", title: "HR" },
-                { id: 4, pid: 3, name: "Blair Francis", title: "HR" }
+                { id: 3, pid: 1, name: "Glenn Bell", title: "HR", tags: ['HR'] },
+                { id: 4, pid: 3, name: "Blair Francis", title: "HR", tags: ['HR'] }
               ]}
           >
           </OrgChartReact>
