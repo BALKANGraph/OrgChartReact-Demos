@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact, Employee, OrgChartJS } from "balkan-orgchart-react";
+import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
 export const ChartExample = () => {
   const chartRef = useRef<OrgChartJS>(null);
 
-  function pdf() {
+  function png() {
     chartRef.current?.exportToPNG({
         header: '<text style="font-size:36px;">My Header</text>',
         footer: '<text style="font-size:24px;">My Footer. Page {current-page} of {total-pages}</text>',
@@ -18,7 +18,7 @@ export const ChartExample = () => {
                 export_png: {
                     text: "Export to PNG with my header and footer",
                     icon: OrgChartJS.icon.png(24, 24, "#7A7A7A"),
-                    onClick: pdf
+                    onClick: png
                 },
             }}
             enableSearch={false}

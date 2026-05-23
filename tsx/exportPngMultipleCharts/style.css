@@ -1,0 +1,37 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.chart > div {
+  width: 100%;
+  height: 100%;
+}
+
+.chart {
+  width: 50%;
+  height: 45%;
+  text-align: center;
+}
+
+.mid {
+  background-color: #3c3c3c;
+  height: 10%;
+  text-align: center;
+  color: #fff;
+}
+
+.mid button {
+  padding: 10px;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+}
