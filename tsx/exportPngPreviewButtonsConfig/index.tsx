@@ -6,26 +6,19 @@ export const ChartExample = () => {
 
   const chartRef = useRef<OrgChartJS>(null);
 
-  let logo =
-    `<svg>
-        <text fill="#039be5" 
-            style="font-size: 2px; font-family: Roboto-Bold;" x="50%" y="50%"
-            text-anchor="middle" dominant-baseline="middle">
-            My Company Organization Chart
-        </text>
-    </svg>`;
+  if (chartRef.current) {
+    chartRef.current.pngPreviewUI.buttons.addNewPage = true;
+    chartRef.current.pngPreviewUI.buttons.childLevels = true;
+    chartRef.current.pngPreviewUI.buttons.parentLevels = true;
+    chartRef.current.pngPreviewUI.buttons.removePage = true;
+  }
   
   function pngPreview() {
     chartRef.current?.pngPreviewUI.show({
       pages: [
         {
-          content: logo
-          // or
-          // content: '[Your HTML definition here]'
-        },
-        {
-          nodeId: 2
-        },
+          nodeId: 1
+        }
       ]
     });
   }
