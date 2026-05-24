@@ -10,7 +10,6 @@ export const ChartsExample = () => {
 
   function png() {
     chart1Ref.current?.exportToPNG({
-        format: "A4",
         pages: [
           { chartInstance: chart1Ref.current || undefined, header: '<text>OrgChart 1</text>' },
           { chartInstance: chart2Ref.current || undefined, header: '<text>OrgChart 2</text>' },
