@@ -5,7 +5,7 @@ import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 export const ChartExample = () => {
   const chartRef = useRef<OrgChartJS>(null);
 
-  function pdf() {
+  function png() {
     chartRef.current?.exportToPNG({
         expandChildren: false,
         pages: [
@@ -29,7 +29,7 @@ export const ChartExample = () => {
                 export_png: {
                     text: "Export to PNG by Teams",
                     icon: OrgChartJS.icon.png(24, 24, "#7A7A7A"),
-                    onClick: pdf
+                    onClick: png
                 },
             }}
             enableSearch={false}
