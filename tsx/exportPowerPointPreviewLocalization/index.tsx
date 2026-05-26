@@ -9,11 +9,11 @@ export const ChartExample = () => {
   function powerPointPreview(){
     if (chartRef.current) {
       chartRef.current.powerPointPreviewUI.locCancel = '关闭';
-      chartRef.current.powerPointPreviewUI.locAddNew = '移除幻灯片';
+      chartRef.current.powerPointPreviewUI.locAddNew = '添加新幻灯片';
       chartRef.current.powerPointPreviewUI.locExport = '导出';
       chartRef.current.powerPointPreviewUI.locRemove = '移除幻灯片';
       chartRef.current.powerPointPreviewUI.locClickToAdd = '点击一个节点以在此处显示';
-      chartRef.current
+
       chartRef.current.powerPointPreviewUI.show({
         footer: `<text text-anchor="end" style="font-size: 24px;">
                   第 {current-page} 页，共 {total-pages} 页
