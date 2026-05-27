@@ -14,6 +14,7 @@ export const ChartExample = () => {
   }, []);
 
   return  <OrgChartReact ref={chartRef}
+            // onExportStart={(args) => { args.styles += exportStyles; }}
             nodeBinding={{ field_0: 'name', field_1: 'title' }}
             menu={{ pp_export: { text: "Export PowerPoint" } }}
               enableSearch={false}

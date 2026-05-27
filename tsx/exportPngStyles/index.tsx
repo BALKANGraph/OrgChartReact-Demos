@@ -5,16 +5,12 @@ import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 export const ChartExample = () => {
 
   const chartRef = useRef<OrgChartJS>(null);
+
   const exportStyles = document.getElementById("myStyles")?.outerHTML || "";
 
-
-  useEffect(() => {
-    chartRef.current?.onExportStart((args) => {
-      args.styles += exportStyles;
-    });
-  }, []);
-
-  return  <OrgChartReact ref={chartRef}
+  return  <OrgChartReact 
+            ref={chartRef}
+            onExportStart={(args) => { args.styles += exportStyles; }}
             nodeBinding={{ field_0: 'name', field_1: 'title' }}
             menu={{
               export_png: {
