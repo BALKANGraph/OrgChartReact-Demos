@@ -15,9 +15,9 @@ export const ChartExample = () => {
       chartRef.current.pngPreviewUI.locClickToAdd = '点击一个节点以在此处显示';
       chartRef.current.pngPreviewUI.locAddNew = '添加新的 PNG';
       chartRef.current.pngPreviewUI.locRemove = '移除 PNG';
-      chartRef.current.pngPreviewUI.locParentLevels = 'parent levels';
-      chartRef.current.pngPreviewUI.locChildLevels = 'child levels';
-      chartRef.current
+      chartRef.current.pngPreviewUI.locParentLevels = '父级层级';
+      chartRef.current.pngPreviewUI.locChildLevels = '子级层级';
+
       chartRef.current.pngPreviewUI.show({
         footer: `<text text-anchor="end" style="font-size: 24px;">
                   第 {current-page} 页，共 {total-pages} 页
