@@ -4,10 +4,22 @@ import { OrgChartReact } from "balkan-orgchart-react";
 
 export const ChartExample = () => {
   return  <OrgChartReact 
-            nodeBinding={{ field_0: 'name', field_1: 'title' }}
+            nodeBinding={{ field_0: 'name', field_1: 'title', img_0: 'img' }}
             menu={{ 
               csv_export: { text: "Export CSV" },
               xml_export: { text: "Export XML" },
+            }}
+            onExportStart={(args: any) => {
+              if (args.ext == 'csv' || args.ext == 'xml'){
+                  var newNodes = [];
+                  for(var i = 0; i < args.nodes.length; i++){
+                      newNodes.push({
+                          name: args.nodes[i].name,
+                          title: args.nodes[i].title
+                      })
+                  }
+                  args.nodes = newNodes;
+              }
             }}
             nodeMenu={{ csv_export: { text: "Export CSV" } }}
             enableSearch={false}
