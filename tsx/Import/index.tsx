@@ -7,6 +7,7 @@ export const ChartExample = () => {
   const chartRef = useRef<OrgChartJS>(null);
 
   return  <OrgChartReact 
+            ref={chartRef}
             nodeBinding={{ field_0: 'name', field_1: 'title' }}
             menu={{ 
               xml_export: { text: "Export XML" },
