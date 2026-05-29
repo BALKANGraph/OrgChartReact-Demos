@@ -5,26 +5,17 @@ import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 export const ChartExample = () => {
 
   return  <OrgChartReact 
+
             layout={OrgChartJS.layout.mixed}
-            filterBy={{
-              title: {
-                  'QA Lead': { checked: false, text: 'Leads not working'},
-                  'Manager': { checked: false, text: 'Managers not working'},
-                  'QA': { checked: true, text: 'QAs are working'},
-              },
-              name: {},
-              city: {
-                  'Sofia': { checked: false }
-              }
-            }}
+            filterBy={['title']}
             tags={{
               filter: {
-                  template: 'dot'
+                  template: 'ula'
               }
             }}
             data={[
               { id: "1", name: "Jack Hill", title: "Chairman and CEO", city: "London" },
-              { id: "2", pid: "1", name: "Lexie Cole", title: "QA Lead", city: "London" },
+              { id: "2", pid: "1", name: "Lexie Cole", title: "Qefead", city: "London" },
               { id: "3", pid: "1", name: "Janae Barrett", title: "DEV Lead", city: "Sofia" },
               { id: "4", pid: "1", name: "Aaliyah Webb", title: "Manager", city: "London" },
               { id: "5", pid: "2", name: "Elliot Ross", title: "QA", city: "London" },
@@ -41,6 +32,7 @@ export const ChartExample = () => {
               { id: "16", pid: "4", name: "Alex Snider", title: "Sales Manager", city: "London" }
             ]}  
             nodeBinding={{ field_0: 'name', field_1: 'title' }}>
+
           </OrgChartReact>
 }
 

@@ -6,22 +6,7 @@ export const ChartExample = () => {
 
   return  <OrgChartReact 
             layout={OrgChartJS.layout.mixed}
-            filterBy={{
-              title: {
-                  'QA Lead': { checked: false, text: 'Leads not working'},
-                  'Manager': { checked: false, text: 'Managers not working'},
-                  'QA': { checked: true, text: 'QAs are working'},
-              },
-              name: {},
-              city: {
-                  'Sofia': { checked: false }
-              }
-            }}
-            tags={{
-              filter: {
-                  template: 'dot'
-              }
-            }}
+            filterBy={['title', 'city']}
             data={[
               { id: "1", name: "Jack Hill", title: "Chairman and CEO", city: "London" },
               { id: "2", pid: "1", name: "Lexie Cole", title: "QA Lead", city: "London" },
