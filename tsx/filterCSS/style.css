@@ -1,0 +1,3 @@
+.filter rect, .filter image, .filter text, .filter use {
+    filter: blur(10px);
+}
