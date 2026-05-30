@@ -4,11 +4,9 @@ import { OrgChartReact } from "balkan-orgchart-react";
 
 export const ChartExample = () => {
   return  <OrgChartReact 
-            nodeMenu={{
-              details: { text: "Details" },
+            nodeContextMenu={{
               edit: { text: "Edit" },
-              add: { text: "Add" },
-              remove: { text: "Remove" }
+              add: { text: "Add" }
             }}
             data={[
               { id: 1, name: "Billy Moore", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg" },
