@@ -6,9 +6,12 @@ export const ChartExample = () => {
   return  <OrgChartReact 
             controls={{
               pdf_export: { title: 'Export to PDF' },
-              zoom_in: { title: "Zoom In"},
-              zoom_out: { title: "Zoom Out"},
-              fit: { title: "Fit the chart"}
+              myControl: { 
+                  title: 'My Control', 
+                  onClick: function(){
+                      alert('My Control clicked')
+                  } 
+              },
             }}
             data={[
               { id: 1, name: "Denny Curtis" },
