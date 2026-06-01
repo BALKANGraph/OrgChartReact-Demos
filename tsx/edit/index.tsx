@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
@@ -6,13 +6,22 @@ export const ChartExample = () => {
 
   const chartRef = useRef<OrgChartJS>(null);
 
-  chartRef.current?.editUI.on('element-btn-click', function (sender, args) {
-    OrgChartJS.fileUploadDialog(function (file) {
-        var formData = new FormData();
+  useEffect(() => {
+    const chart = chartRef.current;
+    if (!chart?.editUI) return;
+
+    const onElementBtnClick = (sender: unknown, args: unknown) => {
+      OrgChartJS.fileUploadDialog(function (file) {
+        const formData = new FormData();
         formData.append('file', file);
         alert('upload the file');
-    })
-});
+        console.log(args);
+        chart.editUI.setAvatar("https://cdn.balkan.app/shared/1.jpg")
+      });
+    };
+
+    chart.editUI.on('element-btn-click', onElementBtnClick);
+  }, []);
 
   return  <OrgChartReact 
             ref={chartRef}
