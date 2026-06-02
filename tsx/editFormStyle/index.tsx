@@ -1,12 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
+import { OrgChartReact } from "balkan-orgchart-react";
 
 export const ChartExample = () => {
 
 
   return  <OrgChartReact 
-            layout={OrgChartJS.layout.mixed}
             data={[
               { id: 1 },
               { id: 2, pid: 1, tags: ['yellow'] },

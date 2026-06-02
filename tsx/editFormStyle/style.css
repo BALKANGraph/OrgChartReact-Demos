@@ -1,0 +1,33 @@
+/*CSS*/
+html, body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:0;
+  overflow: hidden;
+  font-family: Helvetica;
+}
+#tree{
+  width:100%;
+  height:100%;
+}
+
+.yellow>rect{
+    fill: #FFCA28 !important;
+}
+.boc-edit-form.yellow .boc-edit-form-header,
+.boc-edit-form.yellow .boc-img-button{
+    background-color: #FFCA28 !important;
+}
+
+.orange>rect{
+    fill: #F57C00 !important;
+}
+.boc-edit-form.orange .boc-edit-form-header,
+.boc-edit-form.orange .boc-img-button{
+    background-color: #F57C00 !important;
+}
+
+.boc-edit-form.orange .boc-img-button:hover{
+    background-color: #FFCA28 !important;
+}
