@@ -14,6 +14,9 @@ export const ChartExample = () => {
               // chartRef.current?.editUI.show(args.node.id, true); // details mode
               return false; // cancel the click event
             }}
+            // nodeMouseClick={OrgChartJS.action.edit} // edit mode
+            // nodeMouseClick={OrgChartJS.action.details} // details mode
+            // nodeMouseClick={OrgChartJS.action.none} // prevent opening
             data={[
               { id: "1", EmployeeName: "Jack Hill", Title: "Chairman and CEO", Email: "amber@domain.com", ImgUrl: "https://cdn.balkan.app/shared/16.jpg", tags: ['orange'] },
               { id: "2", pid: "1", EmployeeName: "Lexie Cole", Title: "QA Lead", Email: "ava@domain.com", ImgUrl: "https://cdn.balkan.app/shared/2.jpg" },
