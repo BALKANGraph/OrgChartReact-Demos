@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
@@ -10,13 +10,15 @@ function ChartExample() {
     return 'ok';
   }
 
-  chartRef.current?.onAIToolCalls(function(args){    
-      for(var toolCall of args.toolCalls){
-          if (toolCall.FunctionName == 'sendEmail'){
-              toolCall.FunctionResult = sendEmail(toolCall.FunctionArguments as { to: string; subject: string; body: string });
-          }   
-      }    
-  });
+    useEffect(() => {
+      chartRef.current?.onAIToolCalls(function(args){    
+          for(var toolCall of args.toolCalls){
+              if (toolCall.FunctionName == 'sendEmail'){
+                  toolCall.FunctionResult = sendEmail(toolCall.FunctionArguments as { to: string; subject: string; body: string });
+              }   
+          }    
+      });
+    }, []);
 
   return (
     <OrgChartReact
@@ -49,8 +51,7 @@ function ChartExample() {
                     "subject",
                     "body"
                 ]
-            },
-            strict: true
+            }
       }]}
       onInit={() => {
         chartRef.current?.aiUI.show(true)

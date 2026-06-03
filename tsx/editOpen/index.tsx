@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { createRoot } from "react-dom/client";
 import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
