@@ -8,6 +8,12 @@ function ChartExample() {
         undoRedoStorageName="undoRedoStorage"
         onUpdated={function (this: any) {
           console.log("Updated data:", this.config.data);
+              //post config data to your server
+
+              // this.config.nodes
+              // this.config.slinks
+              // this.config.groupDottedLines
+              // this.config.dottedLines
         }}
         nodeBinding={{ field_0: "name", field_1: "title", img_0: "img" }}
         style={{ width: "100%", height: "100%" }}
