@@ -1,11 +1,14 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact } from "balkan-orgchart-react";
+import { OrgChartJS, OrgChartReact } from "balkan-orgchart-react";
 
 function ChartExample() {
   return (
       <OrgChartReact
         undoRedoStorageName="undoRedoStorage"
+        onUpdated={function (this: any) {
+          console.log("Updated data:", this.config.data);
+        }}
         nodeBinding={{ field_0: "name", field_1: "title", img_0: "img" }}
         style={{ width: "100%", height: "100%" }}
         data={[
