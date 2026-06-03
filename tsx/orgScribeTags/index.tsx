@@ -14,7 +14,7 @@ function ChartExample() {
         style={{ width: "100%", height: "100%" }}
         data={[
           { id: 1, name: "Amber McKenzie", title: "CEO" },
-          { id: 2, pid: 1, name: "Ava Field", title: "IT Manager" },
+          { id: 2, pid: 1, name: "Ava Field", title: "IT Manager", tags: ["yellow"] },
           { id: 3, pid: 1, name: "Rhys Harper" }
         ]}
       >

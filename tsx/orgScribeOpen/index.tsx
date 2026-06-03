@@ -5,12 +5,11 @@ import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 function ChartExample() {
   const chartref = React.useRef<OrgChartJS>(null);
   return (
+    <>
+      <button onClick={() => chartref.current?.orgScribeUI.show()}>Open OrgScribe</button>
       <OrgChartReact
         ref={chartref}
-        onInit={() => {
-          chartref.current?.orgScribeUI.show();
-        }}
-        nodeBinding={{ field_0: "name", field_1: "title" }}
+        nodeBinding={{ field_0: "name", field_1: "title"}}
         style={{ width: "100%", height: "100%" }}
         data={[
           { id: 1, name: "Amber McKenzie", title: "CEO" },
@@ -19,6 +18,7 @@ function ChartExample() {
         ]}
       >
       </OrgChartReact>
+      </>
   );
 }
 

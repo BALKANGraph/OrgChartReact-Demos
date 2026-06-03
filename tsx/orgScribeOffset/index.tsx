@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
 function ChartExample() {
+  OrgChartJS.ORGSCRIBE_OFFSET = "#";
   const chartref = React.useRef<OrgChartJS>(null);
   return (
       <OrgChartReact

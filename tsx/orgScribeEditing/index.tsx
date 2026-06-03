@@ -9,6 +9,7 @@ function ChartExample() {
         ref={chartref}
         onInit={() => {
           chartref.current?.orgScribeUI.show();
+          chartref.current?.editUI.show(2);
         }}
         nodeBinding={{ field_0: "name", field_1: "title" }}
         style={{ width: "100%", height: "100%" }}
