@@ -6,7 +6,7 @@ function ChartExample() {
   const chartRef = useRef<OrgChartJS>(null);
 
   function sendEmail(args: { to: string; subject: string; body: string }){
-    window.location.href = `mailto:${args.to}&subject=${encodeURI(args.subject)}&body=${encodeURI(args.body)}`;
+    window.location.href = `mailto:${args.to}?subject=${encodeURI(args.subject)}&body=${encodeURI(args.body)}`;
     return 'ok';
   }
 
