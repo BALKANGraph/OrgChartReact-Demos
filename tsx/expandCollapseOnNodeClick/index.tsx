@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact } from "balkan-orgchart-react";
+import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
 export const ChartExample = () => {
   return  <OrgChartReact 
@@ -11,20 +11,13 @@ export const ChartExample = () => {
               { id: 4, pid: 2 },
               { id: 5, pid: 2 },
               { id: 6, pid: 3 },
-              { id: 7, pid: 3 },
-              { id: 8, pid: 4 }
+              { id: 7, pid: 3 }
             ]} 
             nodeBinding={{
               field_0: "id",
               field_1: "pid",
             }}
-            collapse={{
-              level: 2,
-              allChildren: true
-            }}
-            expand={{
-              nodes: [4]
-            }}>
+            nodeMouseClick={OrgChartJS.action.expandCollapse}>
           </OrgChartReact>
 }
 
