@@ -1,5 +1,5 @@
 {
-  "name": "expand-collapse-all-children-except-nodes-with-all-children-expanded",
+  "name": "expand-collapse-all-children-except",
   "private": true,
   "version": "1.0.0",
   "type": "module",

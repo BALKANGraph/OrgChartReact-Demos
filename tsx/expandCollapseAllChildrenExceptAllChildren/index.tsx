@@ -23,8 +23,7 @@ export const ChartExample = () => {
               allChildren: true
             }}
             expand={{
-              nodes: [4],
-              allChildren: true
+              nodes: [4]
             }}>
           </OrgChartReact>
 }
