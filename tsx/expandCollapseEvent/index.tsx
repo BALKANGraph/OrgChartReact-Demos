@@ -16,15 +16,17 @@ function iterate(c: OrgChartJS, n: any, collapseIds: number[], id: number) {
     }
 }
 
-function collapseAll() {
+function collapseAll(args: any) {
+  if (args.collapsing) {
     const chart = chartRef.current;
     if (!chart) return;
-    let id = 1
+    let id = args.id;
     let node = chart.getNode(id);
     let collapseIds: number[] = [];
     iterate(chart, node, collapseIds, id);
     chart.expandCollapse(id, [], collapseIds);
-    chart.center(1);
+  };
+    
 };
 
   return  <>
@@ -44,7 +46,7 @@ function collapseAll() {
               field_0: "id",
               field_1: "pid",
             }}
-            onExpandCollapseButtonClick={collapseAll}>
+            onExpandCollapseButtonClick={args => collapseAll(args)}>
           </OrgChartReact>
           </>
 }
