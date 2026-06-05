@@ -25,6 +25,7 @@ function collapseAll(args: any) {
     let collapseIds: number[] = [];
     iterate(chart, node, collapseIds, id);
     chart.expandCollapse(id, [], collapseIds);
+    return false;
   };
     
 };
