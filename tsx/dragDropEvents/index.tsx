@@ -5,6 +5,15 @@ import { OrgChartReact } from "balkan-orgchart-react";
 export const ChartExample = () => {
   return  <OrgChartReact 
             enableDragDrop={true}
+            onDrop={(args) => {
+              if (args.dragId == "1"){
+                  return false;
+              }
+
+              if (args.dropId == "4"){
+                  return false;
+              }
+            }}
             data={[
               { id: "1", tags: ["Management"], name: "Amber McKenzie", title: "CEO", img: "https://cdn.balkan.app/shared/1.jpg" },
               { id: "2", pid: "1", tags: ["IT Manager"], name: "Ava Field", title: "IT Manager", img: "https://cdn.balkan.app/shared/2.jpg" },
