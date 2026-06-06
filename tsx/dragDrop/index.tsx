@@ -1,19 +1,17 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { OrgChartReact, Employee } from "balkan-orgchart-react";
+import { OrgChartReact } from "balkan-orgchart-react";
 
-function ChartExample() {
-  return (
-      <OrgChartReact
-        nodeBinding={{ field_0: "name", field_1: "title" }}
-        style={{ width: "100%", height: "100%" }}
-      >
-        <Employee name="Denny Curtis" title="CEO">
-          <Employee name="Lexie Cole" title="QA Lead" />
-          <Employee name="Janae Barrett" title="Technical Director" />
-        </Employee>
-      </OrgChartReact>
-  );
+export const ChartExample = () => {
+  return  <OrgChartReact 
+            enableDragDrop={true}
+            data={[
+              { id: 1, name: "Amber McKenzie" },
+              { id: 2, pid: 1, name: "Ava Field" },
+              { id: 3, pid: 1, name: "Peter Stevens" }
+            ]}  
+            nodeBinding={{ field_0: 'name', field_1: 'title' }}>
+          </OrgChartReact>
 }
 
 createRoot(document.getElementById("root")!).render(
