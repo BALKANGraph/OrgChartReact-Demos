@@ -6,13 +6,9 @@ export const ChartExample = () => {
   return  <OrgChartReact 
             template={"olivia"}
             dottedLines={[
-              { from: 5, to: 1, tags: ["ula"] }
+              { from: 5, to: 1 },
+              { from: 4, to: 5, rootId: 1 },
             ]}
-            tags={{
-              "ula": {
-                template: "ula"
-              }
-            }}
             data={[
               { id: 1, name: "Jack Hill", title: "CEO", email: "amber@domain.com", img: "https://cdn.balkan.app/shared/a/1.jpg" },
               { id: 2, pid: 1, name: "Lexie Cole", title: "Sales Director", email: "ava@domain.com", img: "https://cdn.balkan.app/shared/a/2.jpg" },
