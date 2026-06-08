@@ -7,7 +7,8 @@ function ChartExample() {
       <OrgChartReact
         scaleInitial={OrgChartJS.match.none}
         layout={OrgChartJS.layout.mixed}
-        mouseScrool={OrgChartJS.action.scroll}
+        mouseScrool={OrgChartJS.action.xScroll}
+        showXScroll={true}
         data={[
           { id: 1 },
           { id: 2, pid: 1 },

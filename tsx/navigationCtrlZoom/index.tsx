@@ -5,9 +5,11 @@ import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 function ChartExample() {
   return (
       <OrgChartReact
+        showXScroll={true}
+        showYScroll={true}
         scaleInitial={OrgChartJS.match.none}
         layout={OrgChartJS.layout.mixed}
-        mouseScrool={OrgChartJS.action.scroll}
+        mouseScrool={OrgChartJS.action.ctrlZoom}
         data={[
           { id: 1 },
           { id: 2, pid: 1 },
@@ -21,18 +23,18 @@ function ChartExample() {
           { id: 10, pid: 3 },
           { id: 11, pid: 4 },
           { id: 12, pid: 4 },
-          { id: 13, pid: 5 },
           { id: 14, pid: 5 },
           { id: 15, pid: 5 },
-          { id: 16, pid: 6 },
+          { id: 16, pid: 5 },
           { id: 17, pid: 6 },
           { id: 18, pid: 6 },
-          { id: 19, pid: 7 },
+          { id: 19, pid: 6 },
           { id: 20, pid: 7 },
           { id: 21, pid: 7 },
-          { id: 22, pid: 8 },
+          { id: 22, pid: 7 },
           { id: 23, pid: 8 },
           { id: 24, pid: 8 },
+          { id: 25, pid: 8 },
           { id: 26, pid: 9 },
           { id: 27, pid: 9 },
           { id: 28, pid: 9 },
