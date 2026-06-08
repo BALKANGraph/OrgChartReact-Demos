@@ -5,38 +5,37 @@ import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 function ChartExample() {
 
   const chartRef = useRef<OrgChartJS>(null);
-  let chart = chartRef.current;
 
   return (
     <>
     <div id="nav"> 
       <div>Press and hold one of the button to move the chart in that direction.</div>
       <button 
-        onMouseDown={() => chart?.moveStart({
+        onMouseDown={() => chartRef.current?.moveStart({
           up: true 
         })}
-        onMouseUp={() => chart?.moveEnd()}>
+        onMouseUp={() => chartRef.current?.moveEnd()}>
         Up
       </button>
       <button 
-        onMouseDown={() => chart?.moveStart({
+        onMouseDown={() => chartRef.current?.moveStart({
           down: true
         })}
-        onMouseUp={() => chart?.moveEnd()}>
+        onMouseUp={() => chartRef.current?.moveEnd()}>
         Down
       </button>
       <button 
-        onMouseDown={() => chart?.moveStart({
+        onMouseDown={() => chartRef.current?.moveStart({
           left: true 
         })}
-        onMouseUp={() => chart?.moveEnd()}>
+        onMouseUp={() => chartRef.current?.moveEnd()}>
         Left
       </button>
       <button 
-        onMouseDown={() => chart?.moveStart({
+        onMouseDown={() => chartRef.current?.moveStart({
           right: true
         })}
-        onMouseUp={() => chart?.moveEnd()}>
+        onMouseUp={() => chartRef.current?.moveEnd()}>
         Right
       </button>
     </div>
