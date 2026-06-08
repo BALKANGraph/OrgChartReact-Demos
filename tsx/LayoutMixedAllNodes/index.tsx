@@ -4,7 +4,8 @@ import { OrgChartReact, OrgChartJS } from "balkan-orgchart-react";
 
 function ChartExample() {
 
-
+  OrgChartJS.MIXED_LAYOUT_ALL_NODES = true;
+  
   return  <OrgChartReact 
             layout={OrgChartJS.layout.mixed}
             data={[
