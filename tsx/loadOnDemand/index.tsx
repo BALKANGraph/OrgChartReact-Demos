@@ -51,7 +51,6 @@ function ChartExample() {
              onDemand={(args) => {
                 loadNodesFromServer(args.ids, (nodes: any[] | null) => {
                   if (nodes) {
-                    console.log("Loaded nodes from server:", nodes);
                     chartref.current?.addNodes(args.id, nodes, () => {
                       chartref.current?.moveNodesToVisibleAreaAfterExpand(
                         args.id,
